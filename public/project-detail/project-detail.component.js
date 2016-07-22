@@ -7,7 +7,7 @@ angular.
 		  var self = this;
 		  console.log("routeParams:" + $routeParams.projectId);
 		  $http.get('/projects/' + $routeParams.projectId).then(function(response) {
-			 console.log(response.data);
+			 //console.log(response.data);
 			 self.projects = response.data; 
 		  });
 		}]

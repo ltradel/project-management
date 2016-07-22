@@ -1,6 +1,7 @@
-	
-	<div class="row col-md-6">		
-		<form name="registerForm" ng-submit="submit()">
+	<br>
+	<br>
+	<form name="registerForm" ng-submit="submit()">
+		<div class="row col-md-3">
 			<!--
 			<div align="center">
 				<h2>Employee Registration</h2>
@@ -25,6 +26,11 @@
 			  <label for="lastname">Last Name:</label>
 			  <input type="text" class="form-control" ng-model="employee.lastname" ng-required="true">
 			</div>
+		</div>
+		<div class="row col-md-1">
+		</div>
+	<!-- style="overflow:scroll;"-->
+		<div class="row col-md-3">		
 			<div class="form-group">
 			  <label for="nickname">Nickname:</label>
 			  <input type="text" class="form-control" ng-model="employee.nickname" ng-required="true">
@@ -41,5 +47,5 @@
 				<input id="btnSubmit" type="submit" class="btn btn-primary">
 				<button id="btnCancel" type="button" class="btn btn-primary" ng-click="cancel()">Cancel</button>
 			</div>
-		</form>
-	</div>
+		</div>
+	</form>

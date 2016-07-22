@@ -34,20 +34,25 @@ router.get('/login', function(req, res) {
 	var objConn = createConn();
     console.log(req.query.emp_id);
 	console.log(req.query.password);
-	objConn.query('SELECT * FROM basic_information where empid = ? AND password = ? AND active_flag = ?', [req.query.emp_id, req.query.password, 'Y'], function(error, rows) {
+	objConn.query('SELECT firstname FROM basic_information where empid = ? AND password = ? AND active_flag = ?', [req.query.emp_id, req.query.password, 'Y'], function(error, rows) {
 		console.log('xx');
 		console.log(rows.length);
 		
             if (rows.length > 0) {
                 console.log('success');
-                res.end('Hi ' + req.query.emp_id + '!! You have successfully log in.');
+				var firstNameVar = rows[0].firstname;
+				console.log('fvar :'+firstNameVar);
+				res.send(firstNameVar);
+                //res.send('0');
+                //res.end('Hi ' + req.query.emp_id + '!! You have successfully log in.');
             } else {
 				console.log('fail');
-                res.end('Hi ' + req.query.emp_id + '!! You have not successfully log in.');
+                res.send('1');
+                //res.end('Hi ' + req.query.emp_id + '!! You have not successfully log in.');
             }
     });
 	
-	res.send("Hello POST init");
+	//res.send("Hello POST init");
 });
 
 module.exports = router;

@@ -10,6 +10,8 @@ var users = require('./routes/users');
 var projects = require('./routes/projects');
 var wsor = require('./routes/wsor');
 var init = require('./routes/init');
+var view = require('./routes/view');
+var sview = require('./routes/sview');
 
 var app = express();
 
@@ -29,6 +31,8 @@ app.use('/users', users);
 app.use('/projects', projects);
 app.use('/wsor', wsor);
 app.use('/init', init);
+app.use('/view', view);
+app.use('/sview', sview);
 app.use('/components', express.static(path.join(__dirname, '/node_modules')))
 
 app.use('/*', function(req, res) {
