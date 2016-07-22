@@ -30,6 +30,9 @@ angular.
 		when('/init', {
           template: '<project-login></project-login>'
         }).
+		when('/projects/qualifications', {
+          template: '<project-qualifications></project-qualifications>'
+        }).
         otherwise('/index');
     }
   ]);

@@ -1,0 +1,34 @@
+<div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+				<li class="active"><a href="#!/projects/qualifications">Basic Information<span class="sr-only">(current)</span></a></li>
+				<li><a href="#!/projects/qualifications">Summary of Qualifications</a></li>
+				<li><a href="#!/projects/areas">Areas of Specialization</a></li>
+				<li><a href="#!/projects/education">Education and Training</a></li>
+				<li><a href="#!/projects/career" >Career Synopsis</a></li>	               
+				<li><a href="#!/projects/exp" >Project Experience</a></li>	               
+          </ul>     
+</div>
+
+
+    <label for="Description" class="col-sm-2 control-label">Qualification(s):</label>
+
+<div class="row col-md-10">	
+	<form name="qualificationForm">
+		<div class="form-group form-inline" ng-repeat="qualifications in qualifications">
+			<textarea ng-model="employee.qualifications" class="form-control" cols="117" ng-required="true"> </textarea>
+			 <!--
+			 <input type="text" ng-model="employee.qualifications" class="form-control" cols="117" ng-required="true"> </input>
+			 <input type="text" class="form-control" rows="" ng-required="true" size="116" ng-model="qualifications.quali"></input> -->
+			<button type="button" class="btn btn-primary" ng-click="removeQualification(qualifications.id)">-</button>
+			
+		</div>
+ 
+  
+		<div align="right">
+			<button type="button" class="btn btn-primary" ng-click="addNewQualification()">Add</button>  
+			<button id="btnSubmit" type="button" class="btn btn-primary" ng-click="submt()">Save</button>
+			<button id="btnCancel" type="button" class="btn btn-primary" ng-click="cancel()">Cancel</button>
+		</div>
+	</form>
+</div>
+
