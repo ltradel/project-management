@@ -40,6 +40,7 @@ angular.
           template: '<document-view></document-view>'
         }).
         otherwise('/index');
+
     }
 	]);
 	
